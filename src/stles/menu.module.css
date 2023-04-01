@@ -1,0 +1,22 @@
+
+
+@media screen and (max-width:480px) {
+  .margin{
+    margin-top: 80px;
+    overflow: scroll;
+  }
+}
+.positions{
+  color: blue;
+  border: 1px solid rgb(255, 0, 179);
+  /* position: -webkit-sticky; */
+  /* position: -webkit-sticky; */
+  position:sticky;
+  top: 50px;
+  height:700px;
+}
+
+
+  .scrollbar::-webkit-scrollbar { 
+    display: none;
+}
