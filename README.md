@@ -83,41 +83,27 @@ I made this project within the 15 days
 ## Kfc- More Detailes :
 <table>
   <tr>
-    <td><img src=""  alt="home" /></td>
+    <td><img src={"./image/kfc_home.png"}  alt="home" /></td>
   </tr>
   <br/>
   <tr>
-    <td><img src=""  alt="" /></td>
+    <td><img src={"./image/kfc_menu.png"}  alt="" /></td>
   </tr>
   <br/>
   <tr>
-    <td><img src=""  alt="" /></td>
-  </tr>
-  <br/>
-   <tr>
-    <td><img src=""   alt="" /></td>
+    <td><img src={"./image/kfc_signup.png"}  alt="" /></td>
   </tr>
   <br/>
    <tr>
-    <td><img src=""   alt="" /></td>
+    <td><img src={"./image/kfc_cart.png"}   alt="" /></td>
   </tr>
-
-  <tr>
-    <td><img src=""   alt="" /></td>
-  </tr>
-
-  <tr>
-    <td><img src=""   alt="" /></td>
-  </tr>
-  <tr>
-    <td><img src=""   alt="" /></td>
-  </tr>
-  
   <br/>
+   <tr>
+    <td><img src={"./image/kfc_payment.png"}  alt="" /></td>
+  </tr>
 
 </table>
 <br />
-
 
 
 ## Getting Started
