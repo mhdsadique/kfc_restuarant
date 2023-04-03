@@ -1,9 +1,5 @@
 
-
-## admin mail : kfcadmin@gmail.com 
-## admin password : 1234
-
-### https://kfc-mhdsadique.vercel.app/
+<!-- ### https://kfc-mhdsadique.vercel.app/ -->
 
 <h1 align="center">Kfc.com Clone</h1>
 <br />
@@ -126,5 +122,5 @@ I made this project within the 15 days
 
 ## Getting Started
 
-This project was built using Typecript Nextjs, Chakra UI, CSS, JavaScript, Rest API,Redux, . It is an online fast-food restaurant, Order can KFC Items 
+This project was built using Typecript, Nextjs, Chakra UI, CSS, JavaScript, Rest API,Redux, . It is an online fast-food restaurant, Order can KFC Items 
 <br />
