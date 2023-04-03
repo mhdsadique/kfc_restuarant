@@ -83,7 +83,7 @@ I made this project within the 15 days
 ## Kfc- More Detailes :
 <table>
   <tr>
-    <td><img src="./image/kfc_home.png" alt="home" /></td>
+    <td><img src={./image/kfc_home.png} alt="home" /></td>
   </tr>
   <br/>
   <tr>
