@@ -120,7 +120,7 @@ export default function Signup() {
               </Button>
             </Stack>
             <Stack pt={6}>
-              <Button color={'blue.400'} align='center'>
+              <Button color={'blue.400'}>
     
                 Already a user?
               </Button>

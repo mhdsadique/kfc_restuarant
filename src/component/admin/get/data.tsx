@@ -7,10 +7,11 @@ import React ,{Dispatch, useEffect, useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Updatemodal } from '../update/modal'
 import axios from 'axios'
+import Image from 'next/image'
 export const Getdata = (data:Product) => {
   const rout=useRouter()
   const toast = useToast()
- const deletedata= async(id)=>{
+ const deletedata= async(id:Number)=>{
   try{
     await axios.delete(`https://smoggy-sheath-dress-fish.cyclic.app/product/delete/${id}`)
       toast({
@@ -36,10 +37,12 @@ export const Getdata = (data:Product) => {
  }
   return (
     <Box  boxShadow='base' p='2' rounded='md' bg='white' display={'flex'}flexDirection='column' h={{lg:'auto',md:"auto",sm:"auto"}}>
-        <img src={data.image}alt="imga" />
+        <Image width={500}height={520} src={data.image}alt="imga" />
+        {/* <Image src={data.image}alt="imga" /> */}
         <Text>{data.title}</Text>
         <Flex>
-        <img style={{width:"15px"}} src={data.itemfind} alt="imga" />
+        <Image width={20}height={30} src={data.itemfind} alt="imga" />
+        {/* <img style={{width:"15px"}} src={data.itemfind} alt="imga" /> */}
         <Text>{data.findname}</Text>
         </Flex>
         <Heading size={'md'}>₹{data.price}</Heading>

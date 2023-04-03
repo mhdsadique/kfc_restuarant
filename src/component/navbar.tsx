@@ -283,7 +283,7 @@ export const Login=()=> {
           duration: 5000,
           isClosable: true,
         })
- if(email=="kfcadmin@gmail.com"&&password==1234){
+ if(email=="kfcadmin@gmail.com"&&password=="1234"){
   toast({
     position: 'top',
     title: 'Welcome To Admin Page.',

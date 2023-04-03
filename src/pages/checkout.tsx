@@ -1,34 +1,33 @@
 import { Box, Button, Flex, Heading, Text, useDisclosure, useToast } from '@chakra-ui/react'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { ImLocation } from 'react-icons/im';
 import { Input} from '@chakra-ui/react'
 import { useRouter } from 'next/router';
-type Datatype={
-  name:String|undefined
-  email:String|undefined
-  number:Number | String| undefined
-  address:String |undefined
+type datatype={
+  name:string|undefined
+  email:string|undefined
+  number:string| undefined
+  address:string |undefined
 }
- const Checkout = () => {
-  var sum1=localStorage.getItem("sum")
-
+let totalsum=0
+const Checkout = () => {
   const rout=useRouter()
   const toast = useToast()
   const [buttdiv,setADDbutt]=useState (1)
-  const [data,setData]=useState ({})
-  const [name,setName]=useState("")
-  const [email,setEmail]=useState("")
-  const [number,setNumber]=useState("")
-  const [address,setAddress]=useState("")
-  const datas:Datatype={
+  const [data,setData]=useState<datatype[]> ([])
+  const [name,setName]=useState <string>("")
+  const [email,setEmail]=useState<string>("")
+  const [number,setNumber]=useState<string>("")
+  const [address,setAddress]=useState<string>("")
+  const datas:datatype={
     name:name,
     email:email,
     number:number,
     address:address
   }
   const savedata=()=>{
-setData(datas)
+   setData([datas])
   }
   const successfull=()=>{
     toast({
@@ -56,10 +55,10 @@ setData(datas)
      <Button colorScheme='blue' mr={3}onClick={()=>{savedata(),setADDbutt(3)}} >Save</Button></Box>
      :buttdiv===3? <Box>
       <Heading size={"md"}>ADDRESS</Heading>
-     <Text size={"md"}>{data.name}</Text>
-     <Text size={"md"}>{data.email}</Text>
-     <Text size={"md"}>{data.number}</Text>
-     <Text size={"sm"}>{data.address}</Text>
+     <Text size={"md"}>{data[0].name}</Text>
+     <Text size={"md"}>{data[0].email}</Text>
+     <Text size={"md"}>{data[0].number}</Text>
+     <Text size={"sm"}>{data[0].address}</Text>
      <Button onClick={()=>setADDbutt(2)}variant='link'>edit</Button>
      </Box> :""
              }
@@ -84,8 +83,9 @@ setData(datas)
         <Text>or</Text>
      <Input type={"number"} placeholder='Enter Your @UPI Number' w='250px'/>
      <br />
-    <Button margin={"20px"}  onClick={successfull} bg='red'w='150px'>Pay - {sum1}</Button>
+    <Button margin={"20px"}  onClick={successfull} bg='red'w='150px'>Pay</Button>
         </Box>
+     
     </Box>
   )
 }

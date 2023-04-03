@@ -3,6 +3,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { Input } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
+
 export const Dataadd =() => {
   const toast = useToast();
   const rout=useRouter()
@@ -13,33 +14,48 @@ export const Dataadd =() => {
   const [itemfind,setitemfind]=useState("")
   const [findname,setfindname]=useState("")
   const [menu,setmenu]=useState("")
-  const payload={
-       image:image,
-       title:title,
-       discription:discription,
-    price:price,
-    itemfind:itemfind,
-    findname:findname ,
-    menu:menu
+  const vegornonveg=(e:any)=>{
+    setfindname(e)
+  if(e=="NON VEG"){
+    setitemfind("https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg")
+  }
+  if(e=="VEG"){
+    setitemfind("https://online.kfc.co.in/static/media/Veg_dot_Icon.d1a3902d.svg")
+  }
+  }
+const payload={
+  image:image,
+  title:title,
+  discription:discription,
+  price:price,
+  itemfind:itemfind,
+  findname:findname ,
+  menu:menu
+}
+
+const submitdata=()=>{
+    axios.post("https://smoggy-sheath-dress-fish.cyclic.app/product/create",payload)
+    .then(re=>{console.log(re)
+      if(re.data.msg=="User notes addedd successfully"){
+
+            toast({
+              title: "Success",
+              description: "Product has been Added succesfully .",
+              status: "success",
+              duration: 3000,
+              isClosable: true,
+            })
+            rout.reload()
+      }else{
+        toast({
+          title: "Not Added",
+          description: "Product Not Added.",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        })
       }
-  const submitdata=()=>{
-    fetch("https://smoggy-sheath-dress-fish.cyclic.app/product/create",{
-        method:"POST",
-        body:JSON.stringify(payload),
-        headers:{
-            "Content-type":"application/json",
-            "Authorization":localStorage.getItem("token")
-        }
-    }).then(res=>res.json())
-    .then(re=>{console.log(re),
-    toast({
-      title: "Success",
-      description: "Product has been succesfully Updated.",
-      status: "success",
-      duration: 3000,
-      isClosable: true,
-    }),
-rout.reload()}
+}
 )
     .catch(er=>{console.log(er),  
        toast({
@@ -49,6 +65,7 @@ rout.reload()}
       duration: 3000,
       isClosable: true,
     })})
+    console.log(payload)
 }
   return (
     <Box marginTop={'100px'}>
@@ -56,8 +73,10 @@ rout.reload()}
       <Input placeholder='title'value={title} onChange={(e)=>setTitile(e.target.value)} />
       <Input placeholder='discription'value={discription} onChange={(e)=>setdiscription(e.target.value)} />
       <Input placeholder='price'value={price} onChange={(e)=>setprice(e.target.value)} />
-      <Input placeholder='itemfind'value={itemfind} onChange={(e)=>setitemfind(e.target.value)} />
-       <select name="" id="" value={findname} onChange={(e)=>setfindname(e.target.value)}>
+
+      {/* <Input placeholder='itemfind'value={itemfind} onChange={(e)=>setitemfind(e.target.value)} /> */}
+       <select name="" id="" value={findname} onChange={(e)=>vegornonveg(e.target.value)}>
+       {/* <select name="" id="" value={findname} onChange={(e)=>setfindname(e.target.value)}> */}
         <option value="">VEG or NON VEG</option>
         <option value="NON VEG">NON VEG</option>
         <option value="VEG"> VEG</option>

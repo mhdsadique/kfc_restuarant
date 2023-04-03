@@ -13,7 +13,6 @@ import { Dispatch } from 'redux'
  const Cart = () => {
   const dispatch : Dispatch<any>=useDispatch()
   const {data,error,loading}:ProductState=useSelector((store:any)=>store.cart)
-
        useEffect(()=>{
         dispatch(getCart())
        },[])

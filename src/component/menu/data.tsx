@@ -10,7 +10,7 @@ export const Datascompo = (data:Product) => {
   const toast = useToast()
   const [token,setToken]=useState("")
   useEffect(()=>{
-    let tokens=  localStorage.getItem("token")
+    let tokens:any=  localStorage.getItem("token")||""
     setToken(tokens) },[])
   const dispatch : Dispatch<any>=useDispatch()
 const addtocart=()=>{

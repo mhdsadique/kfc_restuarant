@@ -16,10 +16,12 @@ import {useEffect}from "react"
 export default function Home() {
 
   const lefttoright=()=>{
-    document.getElementById("container").scrollLeft-=40
+  let left : any=  document.getElementById("container")
+    left.scrollLeft-=40 
   }
   const righttoleft=()=>{
-    document.getElementById("container").scrollLeft+=40
+    let right :HTMLElement | null|any=document.getElementById("container")
+    right.scrollLeft+=40
   }
   return (
     <>

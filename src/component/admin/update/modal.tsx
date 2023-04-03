@@ -1,4 +1,5 @@
 
+import { Product } from '@/utills/types';
 import {
     Modal,
     ModalOverlay,
@@ -18,7 +19,7 @@ import {
   import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useState } from 'react'
-export const Updatemodal=(data)=> {
+export const Updatemodal=(data:any)=> {
     const toast = useToast();
     const rout=useRouter()
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -29,17 +30,18 @@ export const Updatemodal=(data)=> {
   const [itemfind,setitemfind]=useState("")
   const [findname,setfindname]=useState("")
   const [menu,setmenu]=useState("")
-  const payload={
-       image:image,
-       title:title,
-       discription:discription,
-    price:price,
-    itemfind:itemfind,
-    findname:findname ,
-    menu:menu
-      }
 
-const submitdata=async(id)=>{
+ const vegornonveg=(e:any)=>{
+    setfindname(e)
+  console.log(e)
+  if(e=="NON VEG"){
+    setitemfind("https://online.kfc.co.in/static/media/Non_veg_dot_Icon.d975d1f9.svg")
+  }
+  if(e=="VEG"){
+    setitemfind("https://online.kfc.co.in/static/media/Veg_dot_Icon.d1a3902d.svg")
+  }
+  }
+const submitdata=async(id:Number)=>{
     try{
         const response = await axios .patch(`https://smoggy-sheath-dress-fish.cyclic.app/product/update/${id}`, {
             image:image,
@@ -86,7 +88,7 @@ const submitdata=async(id)=>{
       <Input readOnly  placeholder='title'value={data.data.title}  />
       <Input readOnly placeholder='discription'value={data.data.discription} />
       <Input readOnly placeholder='price'value={data.data.price} />
-      <Input readOnly placeholder='itemfind'value={data.data.itemfind} />
+      {/* <Input readOnly placeholder='itemfind'value={data.data.itemfind} /> */}
        <select  name="" id="" value={data.data.findname} >
         <option value="">VEG or NON VEG</option>
         <option value="NON VEG">NON VEG</option>
@@ -109,8 +111,8 @@ const submitdata=async(id)=>{
       <Input placeholder='Update title'value={title} onChange={(e)=>setTitile(e.target.value)} />
       <Input placeholder='discription'value={discription} onChange={(e)=>setdiscription(e.target.value)} />
       <Input placeholder='price'value={price} onChange={(e)=>setprice(e.target.value)} />
-      <Input placeholder='itemfind'value={itemfind} onChange={(e)=>setitemfind(e.target.value)} />
-       <select name="" id="" value={findname} onChange={(e)=>setfindname(e.target.value)}>
+      {/* <Input placeholder='itemfind'value={itemfind} onChange={(e)=>setitemfind(e.target.value)} /> */}
+       <select name="" id="" value={findname} onChange={(e)=>vegornonveg(e.target.value)}>
         <option value="">VEG or NON VEG</option>
         <option value="NON VEG">NON VEG</option>
         <option value="VEG"> VEG</option>

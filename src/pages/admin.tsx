@@ -21,18 +21,22 @@ import { Adminproduct } from '@/redux/admin/action'
   useEffect(()=>{
     dispatch(Adminproduct({filter, page, sort, order,limit,type}))
   },[filter, page, sort, order,limit,type])
-  if(loading)return <Skeleten/>
+  // if(loading)return <Skeleten/>
   if(error)return <Errors/>
-  // console.log(data)
   return (
     <Box w='100%' marginTop={'100px'}>
-     <Dataadd />
-     <Box w='50%' margin='50px auto auto auto'>
+      <Dataadd />
+      {
+        loading?<Skeleten/> :<Box>
+        <Box w='50%' margin='50px auto auto auto'>
      <Button onClick={()=>{setFilter(''),setType("")}}>ALL</Button>
           <Button bg='red' onClick={()=>{setFilter('NON VEG'),setType("findname")}}>NON VEG</Button>
           <Button bg='green' onClick={()=>{setFilter('VEG'),setType("findname")}}>VEG</Button>
      </Box>
-     <Admindata data={data}/>
+     <Admindata data={data}/></Box>
+      }
+    
+     
     </Box>
   )
 }

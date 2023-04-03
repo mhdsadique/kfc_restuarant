@@ -2,7 +2,7 @@ import { Box, Heading } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import React from 'react'
 
-export const Homebox = (prop) => {
+export const Homebox = (prop:any) => {
   const rout=useRouter()
   return (
     

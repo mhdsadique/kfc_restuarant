@@ -1,14 +1,14 @@
 
 export interface Product{
-    image:String,
+    image:String | any,
     title:String,
     discription:String,
-    price:Number,
-    itemfind:String,
+    price:String ,
+    itemfind:String| any,
     findname:String,
     user:String,
     menu:String
-    _id:String
+    _id:Number
 }
 
 export type ProductAction={
