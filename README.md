@@ -1,6 +1,7 @@
 
 <!-- ### https://kfc-mhdsadique.vercel.app/ -->
-
+ <!-- ***Email- kfcadmin@gmail.com***
+ ***password- 1234*** -->
 <h1 align="center">Kfc.com Clone</h1>
 <br />
 <strong>Kfc is an online fast-food restaurant, Order can KFC Items </strong>
@@ -69,11 +70,11 @@ I made this project within the 15 days
 - Login and Signup User Account
 - Product Sorting Based on Price,
 - Product Filtering,
-- My Orders Section for details of all ordered item
 - Cart Add and Remove Items 
 - Cart Update Quantities 
 - Payment Page
--  Admin Can Add Products, Update and Delete Product
+- Admin Can Add Products, Update and Delete Product
+- Responsiveness 
 <br />
 
 ## Admin Account Credentials
