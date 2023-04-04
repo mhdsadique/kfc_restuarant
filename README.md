@@ -83,23 +83,23 @@ I made this project within the 15 days
 ## Kfc- More Detailes :
 <table>
   <tr>
-    <td><img src={./image/kfc_home.png} alt="home" /></td>
+    <td><img src="https://api.onedrive.com/v1.0/drives/4F78EAC6FE3AF45B/items/4F78EAC6FE3AF45B!1622/content?cb=2023-04-04T00%3A39%3A35.8Z" alt="home" /></td>
   </tr>
   <br/>
   <tr>
-    <td><img src={"./image/kfc_menu.png"}  alt="" /></td>
+    <td><img src="https://api.onedrive.com/v1.0/drives/4F78EAC6FE3AF45B/items/4F78EAC6FE3AF45B!1623/thumbnails/0/c786x399/content/kfc_signup.c786x399.png?prefer=noredirect&cb=2023-04-04T00%3A39%3A35.81Z"  alt="signup" /></td>
   </tr>
   <br/>
   <tr>
-    <td><img src={"./image/kfc_signup.png"}  alt="" /></td>
+    <td><img src="https://api.onedrive.com/v1.0/drives/4F78EAC6FE3AF45B/items/4F78EAC6FE3AF45B!1620/thumbnails/0/c1536x785/content/kfc_cart.c1536x785.png?prefer=noredirect&cb=2023-04-04T00%3A39%3A35.827Z"  alt="cart" /></td>
   </tr>
   <br/>
    <tr>
-    <td><img src={"./image/kfc_cart.png"}   alt="" /></td>
+    <td><img src="https://api.onedrive.com/v1.0/drives/4F78EAC6FE3AF45B/items/4F78EAC6FE3AF45B!1621/thumbnails/0/c739x380/content/kfc_menu.c739x380.png?prefer=noredirect&cb=2023-04-04T00%3A39%3A35.813Z"  alt="menu" /></td>
   </tr>
   <br/>
    <tr>
-    <td><img src={"./image/kfc_payment.png"}  alt="" /></td>
+    <td><img src="https://api.onedrive.com/v1.0/drives/4F78EAC6FE3AF45B/items/4F78EAC6FE3AF45B!1624/thumbnails/0/c786x407/content/kfc_payment.c786x407.png?prefer=noredirect&cb=2023-04-04T00%3A39%3A35.803Z"  alt="payment" /></td>
   </tr>
 
 </table>
