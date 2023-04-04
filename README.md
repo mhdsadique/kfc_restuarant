@@ -40,7 +40,7 @@
   <img src="https://img.shields.io/badge/vercel-430098?style=for-the-badge&logo=vercel&logoColor=white" alt="heroku" />
 </p>
 
-<h3 align="center"><a href="https://kfc-mhdsadique.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
+<h3 align="center"><a href="https://kfc-mhdsadique.vercel.app/"><strong>Live » »</strong></a></h3>
 <br />
 
 <p align="center">
